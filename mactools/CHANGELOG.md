@@ -1,0 +1,765 @@
+# Changelog
+
+All notable changes to this project are documented here. The format follows
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
+[Semantic Versioning](https://semver.org/).
+
+Pending release notes live in `changes/unreleased/*.md` and are compiled during
+the app and plugin release processes.
+
+## [v2.2.0] - 2026-11-02
+
+### Added
+
+- Added system-network support for private IP address ranges used by local model services, while retaining public-network transport protections.
+- MacTools can open its panel below the Dynamic Island and restores its menu-bar icon when the hover plugin is disabled or no compatible display is connected.
+- Open installed or running applications directly by voice without assigning hotkeys. Asking for an already active app keeps it visible.
+- Control enabled plugins by voice with native approvals and microphone permission guidance. Conversations survive plugin refreshes, while stopped or expired sessions cannot start waiting commands.
+
+### Changed
+
+- Plugin Sets now open inside Settings and finish with clear tips for using and configuring plugins. Refined previews use each component’s default panel while preserving existing layouts.
+- Import now clarifies that selecting Shortcuts resets omitted bindings to defaults. Unselected categories and local data are preserved.
+- Empty panels now link to plugin installation when no plugins are installed, or directly to panel editing when plugins are available, replacing the tool-pack shortcut.
+
+### Fixed
+
+- Preferences Backup now shows plugin coverage, exclusions, and restore results. Failed exports preserve the last good automatic or cloud backup, and dependent shortcuts follow successfully included definitions.
+- Imported prompt shortcuts apply only when their template definitions restore successfully.
+- Panel editing keeps navigation centered, places Panel Width after Add Widgets, and removes redundant drag controls.
+
+## [plugins-2.2.0] - 2026-11-02
+
+### Added
+
+- Translator now accepts private IPv4 and IPv6 HTTP endpoints, preserves custom endpoint paths, and restricts redirects to the configured service. Requires MacTools 2.2.0 or later.
+- The Apple Container card now shows live CPU, memory, and disk usage. Containers gain a configuration window with CPU, memory, and disk I/O charts plus terminal access, and machines can open a terminal too.
+- New Dynamic Island Hover Panel plugin opens MacTools from the Dynamic Island. The main menu-bar icon stays visible by default, with an option to hide it; saved visibility preferences are preserved.
+- Change automatic access for new plugins by voice, with confirmation before enabling. Changes affect future conversations, and stopping cancels pending changes.
+- New Voice Assistant offers a persistent panel with live captions, audio meters, and global shortcuts. Keys stay in Keychain; feature access supports search, batch changes, and cancelable edits.
+- Voice Assistant ends idle conversations after a configurable timeout, defaulting to one minute. Replies and tasks finish before the timer starts, and the floating panel stays open.
+- Voice Assistant can wait for speech on your Mac before connecting, preserving your opening words while reducing unused API time. Connect when I speak is enabled by default and can be changed in settings.
+- Choose whether newly installed plugins are automatically available from the main Voice Assistant settings page. Automatic access is on by default; current choices are kept when switching to manual approval.
+- Voice Assistant groups connection, conversation, and feature access settings. Model and pricing details explain billed connected silence and free local speech detection, with official links and speaker troubleshooting.
+- Ask for fresh brightness, system, power, appearance, Keep Awake, Night Shift, and mute status. Brightness commands verify their target and distinguish hardware readings from software dimming without undoing adjustments.
+- Voice Assistant reports audible speech and session usage, recovers from interrupted connections, and immediately stops recording and feature access when stopped.
+
+### Changed
+
+- Power Status collapses high-energy apps by default and samples only while expanded. The battery bar is easier to read, and power flow rows show draw without repeating wattage in the header.
+
+### Fixed
+
+- Backups now include more plugin settings, custom layouts, and stable app mappings. Private prompt text and launch-item notes require a separate opt-in; local data and permissions stay on your Mac.
+- Fixed upside-down app icons in Launchpad folder previews, including when dragging a folder.
+- Per-app keyboard modes now reliably switch the top row back to the Mac shortcuts or F1–F12 mode when apps change, after waking the Mac, or when a system write briefly fails.
+- AI settings transfer preserves verified local credentials and excluded private text, including large prompts and legacy Translator keys. Imported services need local key setup before accessing saved credentials.
+- Importing Clipboard preferences preserves local history across app restarts.
+- AI Assistant and Translator back up saved disabled service drafts without requiring complete settings. Drafts stay disabled after import.
+- Imports preserve unrelated prompt and Launch Control drafts, restored input rules, and included prompt shortcuts. AI prompt edits wait for recovery to finish, and Translator rejects unusable restored services.
+- Imported app volumes affect new playback while current playback keeps its gain; later edits preserve other live routes. Usage refresh intervals and low-battery warnings resume with restored settings and permission.
+- Clipboard History creates separate snippets when using New Snippet repeatedly, preserving previously saved snippets.
+
+### Security
+
+- Voice Assistant discards muted and outdated buffered audio, and delayed failures from an old connection no longer stop a new conversation.
+
+## [v2.1.0] - 2026-10-23
+
+### Added
+
+- Arrange controls and widgets in aligned columns with drag previews, labeled editing actions, and adjustable widths. Panel and item widths are included in settings backups.
+- Combine seven starter packs during first-launch setup, with panel previews, plugin choices, and a setup checklist. Resume unfinished setup, restore a backup safely, or start empty while preserving settings.
+
+### Changed
+
+- Startup and plugin refresh stay responsive, with custom menu bar icons finishing preparation after the app becomes available.
+- Plugin details show installation feedback and setup guidance, and plugin updates block conflicting actions. Search opens details directly while keeping usable title matches ahead of capability suggestions.
+- Trackpad plugins share input during weighing, recover after interruptions, and wait for fingers to lift before gestures resume. Stopped gestures stay stopped during updates.
+
+### Fixed
+
+- Expanded panel details remain visible after scrolling.
+- Opening or returning to plugin settings refreshes permission guidance without restarting every plugin's background work.
+- Plugin search now matches Turkish capitalization and German sharp-S spellings consistently.
+- Upgrading panel layouts no longer creates false cloud settings conflicts.
+- MacTools 2.1.0 requires Middle Click and Trackpad Gestures 2.0.2 or later to prevent input conflicts. Older packages keep settings and update guidance, including during interrupted migration recovery.
+- Keep Trackpad Scale calibration across measurements and app restarts when the trackpad provides a stable device identity.
+
+## [plugins-2.1.0] - 2026-10-23
+
+### Added
+
+- Appearance, Night Shift, Microphone Mute, and Auto Hide Dock now offer compact switches in the panel editor on MacTools 2.1.0 or later.
+- Auto Input fixed rules can now set a per-app keyboard mode: follow the system, use standard F1–F12 function keys, or keep the MacBook top-row shortcuts. The choice applies while the app is frontmost.
+- Container Indicator monitors the Apple container service in one panel card, listing containers and virtual machines with CPU, memory, and storage details plus start, stop, and restart controls.
+- Key Stats counts key presses and trackpad use, shows today’s counts on a MacBook Pro keyboard, and charts daily and seven-day usage. Counts reset at midnight; the last seven days stay on device.
+- Power Status shows live power flow, AC input, battery charge and discharge, health, temperature, cycles, and time estimates, with grouped voltage, current, and capacity readings.
+- Power Status now has a collapsible temperature and power section that shows readings for the processor, GPU, memory, storage, mainboard, and battery. The Neural Engine row is hidden on M1 and M2 Macs.
+- Power Status now lists the five apps using the most energy while the panel is open, based on per-process energy counters.
+- Region recordings can zoom toward clicks and scrolling in the saved video. Processing shows progress and can keep the original movie instead.
+- Screenshot adds Spotlight to highlight details in copied, saved, and pinned images. Rectangles, ellipses, and spotlight regions can be selected, moved, resized, and undone after drawing.
+- Trackpad Scale automatically tares finger contact and captures stable readings, keeping results visible after sampling stops. Automatic capture can be disabled; manual Tare is available in Calibration and with ⌘T.
+- Trackpad Scale offers known-weight calibration that stays consistent through brief pressure changes, with an accuracy warning beside the reading.
+- Experimental Trackpad Scale estimates weight on built-in Force Touch trackpads, with stability feedback and restart controls. Middle Click and Trackpad Gestures pause until sampling stops and fingers lift.
+
+### Changed
+
+- Improved plugin discovery across all 12 locales with capability terms such as TipTap, smooth scrolling, launch agents, device batteries, and system monitoring.
+- Brightness reads keep startup and refresh responsive. Monitors that cannot report their current brightness can still use hardware brightness controls.
+- Screenshot keeps recognized text layout, tolerates noisy scrolling frames, adds pinned-image controls, and never overwrites saved files. Cancelling Save As returns to the selection.
+- Screenshot adds opaque fills for rectangles and ellipses and strengthens mosaic redaction against text recovery.
+
+### Removed
+
+- Screenshot removes blur redaction; use mosaic or opaque fills to conceal content.
+
+### Fixed
+
+- Auto Input no longer stalls MacTools during startup or focus changes involving unresponsive apps. Focus tracking recovers when an app quits during a switch.
+- Display volume updates no longer freeze Settings.
+- Hide Active App on Dock Click no longer hides an app newly selected in the Dock when mouse-event delivery is delayed.
+- Window Layouts keeps a window in place when an application ignores an incremental resize.
+- Clipboard History now shows saved image previews reliably on first selection when image details load at the same time.
+- Dock Lock now treats a missing Dock orientation preference as macOS’s default bottom position.
+- Middle Click recovers when another MacTools process releases trackpad input and preserves held-click release when weighing starts. Reconnection stops while disabled or paused.
+- On macOS 14 and 15, screenshots, scrolling capture, and recordings keep menu and popover shadows.
+- Closing text recognition chosen from the mode bar now ends the capture instead of showing annotation tools. Recognized line counts exclude layout blank lines, and the result panel stays on screen.
+
+## [v2.0.1] - 2026-10-10
+
+### Added
+
+- Choose whether floating panels follow macOS transparency or use a solid background, with Reduce Transparency always taking precedence.
+- Menu-bar panel sliders support inline action buttons, including display power controls.
+- Added Turkish as an app language: the language picker now includes Türkçe, and app, plugin, and Finder Sync surfaces are fully localized in Turkish.
+
+### Changed
+
+- The menu bar icon now shows a red dot when an app update is available. Panels show plugin update and loading progress instead of an empty state after launch.
+- Settings and menu-bar panels use consistent native text styles, compact widget labels, and action buttons that fit longer translations.
+
+### Fixed
+
+- Command-1 through Command-9 can be assigned to actions; unassigned keys retain their default navigation behavior.
+- Complete translations for app settings and controls in all supported languages. Improve live language switching, Arabic layouts, appearance controls, and Marketplace privacy and action risk labels.
+- Marketplace plugin rows now show the complete keyboard focus outline, including during installation.
+- Widgets align consistently at the top across panels, layout editing, and previews, reducing extra space below the toolbar.
+- Plugin settings sliders now persist keyboard and assistive-technology adjustments without repeating committed actions when values refresh externally.
+
+## [plugins-2.0.1] - 2026-10-10
+
+### Added
+
+- AI Assistant captures selected text more reliably and no longer overwrites content you copied afterwards. The panel adds hide, stop, and discard controls plus manual text entry, and no longer logs provider error text.
+- Display Brightness can turn off individual displays while keeping at least one on. Disabled displays turn back on when MacTools quits or the remaining displays disconnect.
+- Duo Status adds icon sizes, battery percentage, optional color policies, four network glyphs, volume dots or a bar, and a Bluetooth mark. Existing battery colors remain the default.
+- System Data measures system storage across caches, logs, developer artifacts, package managers, models, and backups, with a safety hint per category. Collapsible groups, Finder reveal, and copy path; nothing is deleted.
+- System Status adds an estimated memory pressure percentage with history and statistics. Choose memory usage or pressure in settings.
+
+### Changed
+
+- AI Assistant shortcuts now prefer directly readable selected text, then use an unchanged clipboard when clipboard input is enabled. Simulated-copy text still requires confirmation.
+- Speed up searches for leftover installers and developer build artifacts in folders with many files.
+- Window Layouts, Auto Input, and Clipboard feedback panels now share the app's floating-panel appearance.
+- Plugin widgets and windows use consistent text, clearer hover details, and native confirmation buttons.
+- Speed up Storage Explorer and Xcode Clean scans of folders with many files, and reduce Storage Explorer memory use in wide folders.
+- System Status simplifies chart controls and offers process limits of 3 (default), 5, 10, 15, or 20. Menu-bar values can be selected independently, including duplicates.
+
+### Fixed
+
+- AI Assistant releases paused shortcuts, keeps prompt edits private until saved, and remembers an empty prompt list. Simulated copy now requires opt-in because its contents may enter Clipboard History.
+- AI Assistant preserves clipboard changes and keeps hidden panels hidden. Selection shortcuts retain the original app and require confirmation before sending simulated-copy text to AI.
+- Custom OpenAI-compatible endpoints now require a complete IPv4 address before private-network checks apply.
+- Clipboard History pastes links copied from another device into text fields and preserves URL format where supported. Plain-text actions also accept URL-only clipboard content.
+- Calendar dates stay centered beneath corner badges, with full lunar labels on hover. System Status network and disk cards fit within the panel.
+- Complete plugin translations and improve Arabic controls, numbers, and dates. Plugin names, retained errors, upload windows, and screenshot tips now follow language changes without restarting operations.
+- Mouse Enhancer preserves normal wheel scrolling if smooth scrolling fails to start or stops responding.
+- Plugin updates that need MacTools 2.0.1 are limited to compatible hosts, so older apps keep their installed versions.
+- Closing a screenshot or recording selection restores the normal cursor.
+- Storage Explorer updates the current view and scan warnings after moving items to Trash without rescanning. Failed items stay selected for retry, and scans start only when requested.
+- System Status improves hardware readings and chart history accuracy, including peaks, gaps, and averages. Process lists group by app, report physical memory use, and refresh more promptly.
+- System Status panels reopen with cached readings and show metrics before process scans finish. Menu-bar popovers keep a consistent background and stay aligned as values change.
+- Window Switcher keeps selections visible, restores minimized windows, and scrolls grids. Search Select shares Cycle's toolbar; preview pinch follows Tab changes and helper app activity is tracked.
+
+## [v2.0.0] - 2026-09-22
+
+### Added
+
+- Apple silicon Nightly builds can install the CLI from Settings, update it with MacTools, and roll back until the next app release. Failed installation or removal can be retried without affecting manual installations.
+- Added preference sync through iCloud Drive or a custom folder, with conflict resolution, retryable imports, and protection for pending local edits and device-specific settings.
+- Command Palette supports dragging and snapping with alignment guides, saved screen-relative positions, and a reset action.
+- Command Palette accepts text for supported actions, with customizable trigger phrases, Tab completion, and safeguards for unfinished IME input and conflicting triggers.
+- Create up to five menu-bar panels that mix widgets and feature actions, with customizable tab icons and a searchable widget library that supports multiple copies.
+- Reorder items within or between panels using drag and drop or move menus, with automatic saving and Undo. Edit panels and manage widgets directly from the menu bar.
+- Added MacTools Original, the original T menu-bar icon, to the online gallery.
+- Plugin installation and activation now check macOS and app version requirements, explain incompatibilities, and offer a recheck option.
+- Plugins can replace the main menu-bar icon while preserving panel access and activity badges. Settings identifies the active provider, and successful plugin removal restores the original icon.
+
+### Changed
+
+- Command Palette uses a consistent Liquid Glass surface and compact search header in Settings and its standalone window, with readable selections and accessibility fallbacks.
+- Menu-bar panels fit up to five compact controls per row, with consistent sizing in the editor and widget library.
+- MacTools now uses PluginKit v7 for multiple plugin views and shared window guides. Existing layouts migrate automatically; installed plugins need compatible updates.
+- Menu-bar panels place Settings and Actions beside their tabs, with update indicators and editing-only footer controls. Option groups show descriptions and adapt to long translated labels.
+- Settings uses consistent adaptive backgrounds, aligned controls, and clearer shortcut sections. Marketplace appears first in Customize.
+
+### Removed
+
+- Removed separate panel layout pages and the click-swap setting. Edit panels in the menu bar and manage shortcuts in Actions & Shortcuts; existing bindings and panel order are preserved.
+
+### Fixed
+
+- Reduced idle CPU use and delays when navigating Settings, switching large panels, editing widgets, or changing shortcuts. Reopened panels retain their state and show current data.
+- Global command and action panels now open without bringing Settings forward. Menu-bar search opens the standalone Command Palette.
+- Generated single-key taps no longer inherit unrelated held modifiers.
+- Fixed crashes when removing widgets, deleting panels, or reopening the widget library. Dragging small widgets now keeps drop previews and row layouts stable.
+- Panel layouts recover after restarting with unreadable older preferences, preserve valid plugin ordering, and apply imported ordering immediately.
+- Window-switching shortcuts respect conflicts after preset changes, including reverse cycling. The current-app chooser targets the app used before opening Command Palette.
+
+## [plugins-2.0.0] - 2026-09-22
+
+### Added
+
+- Added an AI Usage dashboard for Codex and Claude Code with quotas, usage pace, reset countdowns, stale-data indicators, optional menu-bar readings, and separate credential access controls.
+- Clipboard backs up selected History, Saved Clips, and Snippets to password-protected archives, with merge previews, scoped replacement, and local rollback. Private Copy protection remains active.
+- When restored snippets exceed keyword capacity, Clipboard asks before dropping imported bindings and preserves snippet content and local keywords. Failed recovery keeps the previous rollback snapshot.
+- Clipboard items support paste shortcuts with separate Original and Plain Text bindings when needed. Shortcuts last 5 minutes, 1 hour, 1 day, or until removed; timed History items stay available.
+- Device Battery now shows JBL Sense Lite earbud and charging-case levels, with system battery readings as a fallback.
+- Disk Cleanup adds explanations with risk levels, broader cache and log coverage, and run history with cancellation and recovery details, available in all supported app languages.
+- Added Display Volume for compatible external displays, with sliders, shortcuts, background synchronization, and saved estimates when DDC/CI volume readings are unavailable.
+- Added Duo Status to show battery, Wi-Fi signal, and network status in the menu bar, either as a separate icon or as a replacement for the MacTools icon.
+- Added optional icon widgets for 31 single-action controls and settings entry points, with theme support and names, descriptions, and errors available on hover.
+- Mouse Enhancer adds smooth mouse-wheel scrolling with adjustable duration, off by default.
+- Separate mouse and trackpad controls adjust scroll step and speed while leaving scrolling already smoothed by remote-control software unchanged.
+- Added Screenshot with region and window capture, annotations, local text and QR recognition, QR masking, pinned images, and scrolling screenshots.
+- Quick Capture copies a selection immediately. On macOS 15 or later, silent region recording shows a capture outline and controls on the selected display, with save progress until completion.
+- Screenshot captures menus and floating panels with transparency and shadows, keeps controls on the selected display, and provides a magnifier with coordinates, RGB or HEX colors, and color copying.
+- Screenshot saves files to ~/Desktop/screenshot by default and keeps them when the plugin is removed. Scrolling capture processes images in the background and rejects unmatched frames.
+- Send a message to a new Siri conversation on macOS 27 from Command Palette or the panel composer, with draft protection, cancellation, delivery feedback, and retries that avoid duplicate sends.
+- Added Storage Explorer with fast scans, an interactive treemap, Quick Look, drag-to-review, partial-scan warnings, and verified Trash removal.
+- Window Layouts can show centering guides while dragging app windows and snap them to the center on release, respecting the Dock and Stage Manager. This option is off by default.
+- Window Switcher previews support pinch-to-zoom, panning, and Fit controls, with sharper images loaded when inspecting a window.
+
+### Changed
+
+- Calendar shows events grouped by date below the month in an adaptive card. Choose 1-7 days before or after the selected date, or both; the next three days appear by default.
+- Calendar offers an optional Chinese lunar calendar, initially selected by app language. Date cells stay compact, and Chinese holiday badges remain region-specific.
+- Physical Clean Mode now uses entry buttons in panel views, with permission checks and emergency exit controls preserved.
+- Clipboard simplifies scopes and filters, widens the history list, and groups footer actions. Settings groups options by feature, moves uncommon controls to Advanced, and keeps cleanup actions accessible.
+- Clipboard opens on the pointer display, supports dragging and snapping with alignment guides, and remembers each display's position across launches. Display changes preserve saved positions and keep the window visible.
+- Clipboard moves reused items and snippets to the front while preserving selections and paste queue order. History expires from its latest use or capture.
+- Clipboard now defaults to a 512 MB history capacity and a 30 MB per-item limit. Existing saved limits are preserved.
+- Prevent Sleep now offers Default, Display On, and Screen Tools directly in the menu bar, with a description of the selected behavior.
+- Updated plugin views join the unified panel library and require MacTools 1.3.1 with PluginKit v7. Activity Stats widget copies can be resized independently.
+- Window Switcher, Clipboard, and clipboard actions use compact search headers, softer selections, and clearer controls that follow the app appearance, with visible focus and contrast support.
+- Improved plugin settings readability, including System Status charts and narrow layouts, simpler Trackpad Gestures cards, and clearer Action Grid slots and search fields.
+- Window Switcher adds movable, resizable grid and list views with recency ordering, context actions, and optional previews. Each view remembers its size and stays stable during search.
+- Window Switcher filters by app and display, with options for minimized windows, other desktops, and fullscreen Spaces. MacTools windows are included; apps without windows are hidden.
+- Window Switcher search expands with Command-F and stays open after cycling modifiers are released. Closing search restores the previous mode; Search and Select opens ready for typing.
+- Window Switcher groups shortcut presets and custom bindings by scope, with clearer Direct Keys editing and Tab navigation. New defaults preserve native Command-Tab; existing assignments are retained.
+- Xcode Cleanup remains available to remove leftover files after Xcode is uninstalled.
+
+### Fixed
+
+- Activity Stats widget previews no longer refresh live data or resize dashboard cards. Widget copies share chart selections and refresh when their panel becomes visible.
+- Calendar highlights, holiday badges, and event popovers now follow light, dark, and custom themes while preserving event colors from the source calendar.
+- Clipboard consistently opens All, including empty collections. Manage Snippets opens Snippets directly, even while the history is still loading.
+- Clipboard opens and navigates large histories faster, reuses recent previews, and keeps rich text readable in light and dark appearance. Large rich-text items show saved summaries without loading the original content.
+- Clipboard identifies Universal Clipboard content as Other Device, honors declared source apps, and preserves source details when saving, reopening, or restoring items.
+- Device Battery keeps its last readings visible when reopening the panel, avoiding a brief empty state while refreshing.
+- Window Switcher and Clipboard open without activating MacTools, preserving the foreground app and paste target while keeping search and preview controls available.
+- Reduced background work in monitoring widgets, Duo Status, per-app volume, and window tools while preserving tracking, battery alerts, and responsive controls.
+- Trackpad Gestures preserves normal one-finger tap-to-click and double-click responsiveness with TipTap enabled and keeps replayed clicks in order.
+- Window Layouts resizes more windows reliably while respecting VoiceOver and Switch Control, and keeps Restore Previous Frame available after cleanup failures. Centering guides no longer crash on MacTools overlays.
+- Fixed Window Switcher crashes when changing views after scrolling or searching. Preview loading no longer stalls indefinitely, and rapid navigation and pinch zoom remain responsive.
+- Window Switcher preserves Direct Keys assignments during upgrades and never reinterprets them as Close Window or Quit App commands when entering search. New installations use Search and Select.
+- Window Switcher keeps windows on other Spaces selectable when macOS temporarily omits their details or Screen Recording permission hides titles. Untitled windows use the app name.
+- Window Switcher keeps actions on the intended window, cancels delayed switches after dismissal or a change of active app, and pauses switching while recording shortcuts.
+
+## [v1.3.0] - 2026-09-09
+
+### Added
+
+- Added “Run MacTools Action” to Shortcuts, Siri, and Spotlight so supported actions can run without opening Settings.
+- Added automatic local backups of portable app and plugin settings, with storage limits, backup status, and a safety snapshot before imports.
+- Preferences restore preselects available missing plugins, preserves choices, and adds bulk selection and installation progress. It flags plugins needing a restart and another import to restore settings.
+- Added Marketplace detail pages with localized features, actions, requirements, privacy disclosures, and setup guidance available before installation.
+- Added a separate Nightly channel with isolated settings, matching app and plugin builds, and an optional signed and notarized CLI download.
+- Added a Permissions page that groups shared macOS access, lists affected plugins, and refreshes status after returning from System Settings.
+
+### Changed
+
+- Removed the redundant Enable caption beside the command-line switch; the title and status description identify its purpose.
+- Command Palette now shows recent successful actions when search is empty and ranks typed results by relevance.
+- MacTools now uses GPL-3.0-only. App and Nightly CLI downloads include the license, with applicable third-party notices included in the app.
+- Imported icons and animations with transparent backgrounds now adapt to the menu bar appearance. Opaque imports show guidance, while existing opaque artwork retains its colors.
+- MacTools 1.3 uses PluginKit v6 and checks for compatible updates before loading installed plugins. Older packages remain disabled until updated.
+- Settings now remembers collapsed sidebar sections, assigns Command-1 through Command-9 to visible rows, and uses Command-F for the current page's search.
+- Dashboard detail panels now offer more space, Escape-key dismissal, reliable metric switching, and lower CPU usage.
+- Window actions keep their intended target when opened from MacTools command surfaces and report failures without stealing focus.
+
+### Removed
+
+- Removed the persistent plugin sidebar filter and its Command-Shift-F shortcut.
+
+### Fixed
+
+- Changes to plugin confirmation requirements and Run Link permissions now take effect immediately.
+- Fixed stale Command Palette queries and inconsistent search focus after reopening.
+- Enabling Keep Awake no longer stretches feature-panel content or clips its duration options.
+- Mac Settings no longer reverts successful changes while live state is refreshing, and unavailable controls can open the relevant plugin or Marketplace.
+- Fixed preference export crashes involving saved action shortcuts or Run Links, and kept import controls accessible when many plugins are missing.
+- The built-in display is now restored after wake when the external display was disconnected during sleep.
+- Permission guidance now opens the correct System Settings destination, preserves the current plugin page, and shows the draggable helper for Full Disk Access.
+
+### Security
+
+- Removing plugin private data now shows a dedicated warning and blocks reinstallation until cleanup finishes, protecting newly installed data.
+
+## [plugins-1.3.0] - 2026-09-09
+
+### Added
+
+- Added Apple Shortcuts to browse and run the system shortcut library, view folders, stop running shortcuts, and control confirmation and Run Link access.
+- Added Clipboard with encrypted local history, saved clips, reusable snippets, OCR, and rich-text or plain-text paste.
+- Clipboard supports paste queues, app exclusions, Private Copy, and export or sharing of saved items.
+- Device Battery now supports battery readings from compatible MCHOSE mice, including the A7 V3 Ultra+.
+- Added Hide Active App on Dock Click to hide the frontmost app by clicking its Dock icon while preserving other Dock interactions.
+- Added Mac Settings with searchable macOS controls, pinned favorites, and a Zen profile to hide the Dock, menu bar, desktop items, and widgets.
+- Mac Settings profiles support selective application, portable import and export, change history, Undo, and recovery of incomplete changes.
+- Restored Hide Menu Bar Icons with draggable icon layouts and a panel for hidden icons.
+- Right Click can now create CSV, YAML, XML, HTML, CSS, JavaScript, TypeScript, Shell, and Python files.
+- Trackpad Gestures and Custom Shortcuts can now send individual keys and distinguish left and right modifier keys.
+- Added Power Actions to sleep the Mac or open macOS confirmation dialogs for log out, restart, and shut down.
+- Added System Soft Restart to restart macOS user services, preserve the Dock layout, and reopen supported apps.
+- System Status now offers a menu-bar overview with detail charts, pinned readings, selectable time ranges, and an optional global shortcut.
+- System Status menu-bar metrics now support per-metric display styles, configurable values, layout choices, and drag reordering.
+- Added Window Layouts with grid placement, adjustable gaps, layout cycling, incremental width and height controls, display movement, custom layouts, shortcut presets, and Run Links.
+- Optional modifier-key dragging moves windows beneath the pointer without clicking or changing focus, with a configurable status indicator and smoother movement when apps are busy.
+
+### Changed
+
+- Auto Input can now show its HUD near the pointer and offer adaptive reminders. Editable fields in Google Docs, Raycast, and MacTools are recognized more reliably.
+- Official plugins now provide localized Marketplace descriptions, actions, requirements, privacy disclosures, and setup instructions.
+- Cloudflare R2 Upload now follows the selected app language across setup, uploads, status, and errors.
+- Disk Cleanup now explains its optional Full Disk Access requirement and continues to skip protected locations when access is unavailable.
+- Dock Lock can now be toggled directly from its settings page.
+- Official plugin archives now declare GPL-3.0-only and include their license and applicable third-party notices.
+- New plugin packages use PluginKit v6 and require MacTools 1.3.0 or later. Catalogs for older app versions remain unchanged.
+- System Status settings now support preferences export, import, and automatic backups.
+- Trackpad Gestures now provides clearer practice feedback, including finger roles and separate TipTap contact and click status.
+
+### Fixed
+
+- Plugins that require Automation access now indicate that macOS asks for permission on demand instead of showing access as already granted.
+- Fixed Battery Charge Limit failing to switch compatible Macs to battery power while connected to a power adapter.
+- Device Battery now reports AirPods and other Apple headphone battery levels and charging states more reliably, with fewer duplicate or stale readings.
+- Custom Shortcuts now explains recorder startup failures, preserves the previous mapping, and offers permission guidance or a retry.
+- Middle Click no longer navigates the current page when opening a link in a new tab.
+- Night Shift now reports toggle failures safely when the required macOS controls are unavailable or incompatible.
+- Nightly plugins now keep privileged helpers, saved credentials, and Activity Bar AI hooks separate from stable MacTools.
+- Corrected System Status battery temperature, time estimates, and chart statistics, with faster charts and stable pinned readings.
+- Fixed System Status process monitoring getting stuck on “Collecting” when many processes are running.
+- Trackpad Gestures now recognizes staggered multi-finger taps and repeated TipTaps more reliably, including with idle external or virtual pointers.
+- Fixed duplicate or leaked native clicks during trackpad tap actions, and restored normal dragging and recognition after failed gestures.
+- Window Switcher now includes eligible windows from all macOS Spaces, keeps each window separately selectable, and focuses windows directly during keyboard navigation.
+- Improved inline editing stability for large zsh configuration files.
+
+## [v1.2.0] - 2026-08-17
+
+### Added
+
+- Added a shared action system with global shortcuts, reusable workflows, automatic rules, secure Run Links, and selective portable backups.
+- Menu-bar panels now support independent Light and Dark themes, ten built-in palettes, live previews, System Default, and accessible iTerm2 or Base16/Base24 theme imports.
+
+### Changed
+
+- About now keeps app details and update controls visible above a scrollable offline history of the 10 most recent App and Plugin releases.
+- Actions and workflows now preview runs, simplify step editing, reject overlapping work by default, limit unattended concurrency, and enforce per-action deadlines. Step delays also state when each wait begins.
+- MacTools now appears in the Dock while its Settings window is open.
+- Menu-bar panels and their attachment arrows now use a consistent opaque background in Light and Dark appearance without reducing the content area.
+- Settings now uses one resizable sidebar for app, management, and plugin pages, with consistent search, headers, and keyboard navigation. Unified Search preserves the sidebar position while open.
+- Plugin pages can be ordered by localized name, installation date, or drag and drop. The saved order is included in backups without changing menu-bar layouts.
+
+### Fixed
+
+- Actions and Run Links now reject duplicate, recursive, stale, or unsafe requests, preserve cancellation, and explain failures. Imports and backups reject corrupt data and roll back safely.
+- Automatic rules preserve unattended execution through nested or delayed steps and reject newly interactive actions instead of opening MacTools.
+- Long-running workflows launched from Action Grid, Unified Search, or Run Links now continue in Automation after the originating surface closes.
+- Actions & Shortcuts, Run Links, and Automation now follow the selected app language across controls, status messages, errors, and accessibility labels.
+- Automation keeps its resizable workflow list stable and readable, with reliable reordering and action replacement in narrow layouts.
+- Actions & Shortcuts filters remain stable, and Run Link copying is available from expanded action details.
+- Text completion, global shortcuts, and system callbacks no longer crash MacTools when actions open windows, rebuild menu-bar items, or change displays. Unified Search restores the previously active app when it closes.
+- Relaunching MacTools now brings Settings forward in the single running instance and preserves deep links received during startup.
+- Auto Input now activates or releases saved input-source shortcuts as sources are enabled or disabled, without requiring a relaunch.
+- Scheduled workflows now adjust to system clock and time-zone changes, and live-state listeners remain active while enabled rules depend on them.
+- Plugin settings controls and footers now align consistently, and descriptions update immediately when the app language changes.
+
+### Maintenance
+
+- Allowed release preparation to publish a predeclared app version while advancing its build number.
+
+## [plugins-1.2.0] - 2026-08-17
+
+### Added
+
+- Added Action Grid, an accessible 3×3 launcher with nested folders, drag-and-drop and keyboard editing, live action state, and multi-display placement. Foreground actions retain focus, and repeated opens reuse the grid.
+- Auto Input now offers per-source actions, global shortcuts, and a configurable HUD near the focused field or centered on the active display. The HUD stays visible while hovered and cycles on repeated clicks.
+- Added a Cloudflare R2 uploader with guided setup, secure credential storage, pre-upload renaming, conflict handling, cancellable progress, shortcuts, and optional public-link copying.
+- Added Dock Lock to prevent the Dock from moving between displays accidentally, with reusable actions for Action Grid, Automation, and guarded Run Links.
+- Added Custom Shortcuts for mapping keyboard, mouse, scroll, and precise trackpad input to shortcuts, mouse navigation, and common macOS actions, with guarded recording and conflict handling.
+- Middle Click returns with three-, four-, and five-finger trackpad taps and a live-state action for shortcuts, Action Grid, workflows, and search.
+- Added reusable actions across display, audio, system, cleanup, app, input, Homebrew, battery, and fan tools. Long operations retain progress, cancellation, and safety checks.
+- Added live-state toggle actions for appearance, mute, Night Shift, Stage Manager, auto-hide, True Tone, Hide Notch, and Auto Input.
+- Added Saved Scripts with explicit interpreters, timeouts, cancellation, bounded output, opt-in source backups, and actions for shortcuts, gestures, Action Grid, workflows, and confirmation-protected Run Links.
+
+### Changed
+
+- Dashboard components now use shared, appearance-aware colors and surfaces for cards, charts, badges, controls, and progress, while preserving calendar event and AI tool brand colors.
+- IP Check now presents speed-test results in a more compact card layout.
+- Automatic workflows now run only plugin actions that explicitly support unattended execution. Overlapping runs are rejected by default, and every action uses a consistent deadline.
+
+### Removed
+
+- Hide Menu Bar Icons is no longer distributed by MacTools.
+
+### Fixed
+
+- Action Grid settings, availability messages, VoiceOver controls, and live-state actions are now localized in every supported language.
+- Activity Stats no longer reports impossible single-day AI coding durations when tracked sessions overlap, span midnight, or end without a final event.
+- The Calendar widget's localized Today button now remains readable within the month header.
+- Opening Dashboard no longer becomes unresponsive while Bluetooth battery monitoring starts.
+- Device Battery updates no longer install on MacTools versions that lack the required component appearance support.
+- Trackpad Gestures and Mouse Enhancer now recover reliably across display, device, sleep, wake, and plugin lifecycle changes, including external Magic Trackpads over USB or Bluetooth.
+- Middle Click and Trackpad Gestures now arbitrate overlapping gestures, and Middle Click resumes automatically after a conflict is resolved.
+- IP Check settings once again provide controls to hide IP addresses and refresh all checks.
+- Plugin actions now verify outcomes, roll back partial changes, and stop Homebrew processes when cancelled. Sidecar Run Links resolve aliases safely, and older hosts retain a compatible catalog.
+- Fan Control, Sidecar, and Trackpad settings now roll back incomplete imports or failed hardware updates.
+- The Quit Apps selection panel now closes automatically when focus moves elsewhere.
+- Sidecar and restored third-party actions now use visible fallback icons when their preferred system symbol is unavailable on the current macOS version.
+
+### Maintenance
+
+- Rebuilt the plugin line on PluginKit 5 for MacTools 1.2 while preserving the PluginKit 4 catalog for earlier app versions.
+
+## [v1.1.6] - 2026-08-10
+
+### Added
+
+- Added navigation-only deep links for Settings, installed plugin settings, Dashboard, Feature Panel, and search.
+- Command Palette can now set the app appearance, manage Launch at Login, and show or hide installed plugins on each supported surface.
+- An optional global shortcut can now open a standalone Command Palette from any app.
+
+### Changed
+
+- Dashboard and Feature Panel context menus can now move plugins to either end of the list and show or hide them on the current surface.
+- Settings pages now use native macOS backgrounds, appearance-aware sidebars and cards, consistent spacing, responsive widths, compact shortcuts, and live slider readouts; General preferences retain a readable width.
+- Common application shortcuts can now be used after confirming their global effect.
+- Plugin updates now install and validate Trackpad Gestures before Mouse Enhancer retires legacy middle-click behavior, with rollback on failure and a compatibility fallback for temporary app downgrades.
+
+### Fixed
+
+- Plugin settings now use a lighter sidebar surface in Light appearance.
+
+## [plugins-1.1.6] - 2026-08-10
+
+### Added
+
+- Calendar now lets you choose any weekday as the start of the week, with Sunday as the default.
+- Added a dedicated Trackpad Gestures plugin with configurable TipTap, three- to five-finger taps, double taps, and long touches that can trigger keyboard shortcuts or middle clicks.
+- TipTap actions can repeat for each additional-finger tap while fixed fingers remain on the trackpad, and can consume matching native clicks.
+- Adjustable typing protection is enabled by default to prevent palm-triggered gestures while using the keyboard.
+- Responsive mapping controls provide focused editing, unique gesture choices, visible deletion, guidance, accessibility labels, and a safe no-action test mode.
+- Automatic updates install Trackpad Gestures before migrating affected Mouse Enhancer middle-click settings; Mouse Enhancer then focuses on scrolling.
+
+### Changed
+
+- App Hotkey now asks before assigning a common application shortcut globally.
+- Keep Awake now offers three modes: allow display sleep, keep the display on, or keep screen tools active. Screen Tools can prevent automatic locking and support closed-lid use on power; manual locking still works.
+- All plugins now use a unified settings layout with native forms, adaptive system cards for complex managers, single-line shortcut controls, compact menus for long choices, and tick-free stepped sliders.
+- Window Switcher and Physical Clean Mode shortcut fields no longer repeat their row labels, while Display Brightness keeps compact direction icons and aligns both shortcut fields beside the description.
+- Sidecar now asks before assigning a common application shortcut globally.
+
+### Fixed
+
+- Fan Control now reports an error when its helper is not running with administrator privileges or when macOS does not apply the requested SMC fan value, instead of showing an unapplied speed change as successful.
+- Launch Items settings now adapt to smaller windows without clipping filters, lists, details, or scan progress.
+- Mouse Enhancer now preserves separate mouse and trackpad scroll directions after screen locking, sleep and wake, or external-display changes.
+- Sidecar's two global shortcut fields now show their actions beside the recorder, making connect-first and disconnect-all settings easy to distinguish.
+- Translator settings now show their section title in every supported app language.
+
+## [v1.1.5] - 2026-08-03
+
+### Added
+
+- Press Command-K or use the Plugins sidebar to search app destinations, settings, plugins, and supported commands in one accessible palette. Results support number-key selection, exact navigation, and protected shortcuts.
+
+### Changed
+
+- MacTools now explains its local-only System Audio Recording use when an installed plugin provides per-app volume controls.
+- Plugin settings now use an adaptive, resizable native sidebar with focused keyboard navigation and no extra focus outlines. Settings keeps a usable window size and adds Back and Forward toolbar controls.
+
+### Fixed
+
+- The Settings sidebar search field now opens search when clicking anywhere inside its visible bounds.
+
+## [plugins-1.1.5] - 2026-08-03
+
+### Added
+
+- Added App Volume controls for adjusting and remembering the volume of each app currently playing audio on macOS 15 or later.
+- Added Auto Input to remember the last input source used in each app and apply fixed per-app input sources.
+- Keep Awake can create a built-in virtual display while a powered MacBook's lid is closed, allowing screen sharing, remote control, and desktop automation without an external display.
+- Display Brightness and Prevent Sleep expose direct setting destinations, while Display Sleep and Lock Screen opt in to safe command discovery.
+
+### Changed
+
+- Disk Cleanup now scans system caches, developer artifacts, and leftover installers faster. Cleanup moves items to Trash by default and blocks protected, incomplete, locked, or overly broad targets.
+
+### Fixed
+
+- Device Battery command sampling no longer stalls when a spawned helper leaves output pipes open, and preserves partial output when a command times out.
+
+## [v1.1.4] - 2026-07-25
+
+### Added
+
+- MacTools now checks quietly for app updates once per day and surfaces an Update action in the menu-bar panel when a new version is available.
+
+### Changed
+
+- The website About page now tells the MacTools story through an immersive, skippable galactic opening crawl.
+- The website plugin page now provides an interactive, responsive preview of the Marketplace and plugin settings.
+
+### Fixed
+
+- Restored loading for plugins installed before MacTools 1.1.3.
+
+## [plugins-1.1.4] - 2026-07-25
+
+### Fixed
+
+- Rebuilt every plugin package for compatibility with the current MacTools PluginKit runtime.
+
+## [plugins-1.1.3] - 2026-07-24
+
+### Added
+
+- Keep Awake can optionally keep a Mac laptop running with its lid closed. The preference can be enabled on battery, waits for external power, and activates automatically when power connects.
+
+### Changed
+
+- IP Check now performs a lightweight local and public IPv4 refresh whenever its Feature Panel or settings page opens.
+
+### Fixed
+
+- Sidecar device settings now keep connection options and shortcuts readable in narrow Settings windows.
+
+## [v1.1.3] - 2026-07-24
+
+### Added
+
+- General Settings now offers optional global shortcuts to toggle Dashboard and Feature Panel.
+- The Feature Panel now copies button and switch subtitles, including either inline IP Check address, on double-click and briefly confirms successful copies.
+- Settings now provides Back and Forward navigation with ⌘[ and ⌘], including exact restoration of Plugin subpages.
+- Menu-bar panels and Settings now support standard local shortcuts for dismissal, Settings, and search.
+
+### Fixed
+
+- Grouped shortcut controls now stay readable and inside their settings card when labels are long or many actions are shown.
+
+## [v1.1.2] - 2026-07-20
+
+### Added
+
+- Use Command-number shortcuts to switch menu-bar panels and jump among the main Settings pages.
+- Show, hide, and reorder Dashboard components and Feature Panel actions independently. Hiding affects only that surface and does not stop a plugin’s background behavior.
+- Manage installation, updates, and removal in Marketplace, or open plugin settings and uninstall directly from a layout row. Repeated uninstall confirmations can be paused for the current Settings session.
+- Existing global layouts and older backups migrate safely to both surfaces. New backups preserve independent layouts while retaining a conservative legacy projection for older app versions.
+- Plugins previously disabled from Installed load after upgrade but remain hidden on supported surfaces. Downgrading cannot restore the former disabled lifecycle state, so uninstall plugins you do not want running.
+- The online icon gallery now includes a curated set of static icons across every category and marks animated icons with a clear badge for easier browsing.
+
+### Changed
+
+- Background-aware plugins can now pause nonessential work while the session is locked or the Mac is asleep.
+- Animated items in the online icon gallery now use a compact play indicator that leaves more of each icon visible.
+- Menu bar icon settings now show the current selection in a compact preview, play animations at their default speed, and omit playback controls, contrast warnings, and the recent-icons list.
+
+### Fixed
+
+- Feature-panel switches now update reliably after being clicked on macOS 27.
+- Importing menu bar icons now preserves their original colors and transparency, preventing white artwork on transparent PNGs from disappearing.
+- Monochrome icons from the online gallery now automatically adapt to light and dark menu bar backgrounds while colorful icons keep their original appearance.
+
+## [plugins-1.1.2] - 2026-07-20
+
+### Changed
+
+- Use clear visibility controls when choosing System Status metrics for the panel or menu bar.
+
+### Fixed
+
+- Device Battery now avoids unnecessary Bluetooth scans when its widget and low-battery alerts are inactive.
+- Keep Fan Control’s faster refresh limited to its visible, expanded panel, and keep Hide Menu Bar Icons running when it is hidden from a layout.
+
+## [plugins-1.1.1] - 2026-07-17
+
+### Added
+
+- Connect nearby Sidecar-compatible displays with direct actions and status indicators. Switching disconnects the current display before connecting another.
+- Save per-display connection priorities and shortcuts, with a priority-aware shortcut that connects the first available display.
+- Request wired-only transport without falling back to Wi-Fi. Automatic Sidecar controls remain available when wired-only transport is unsupported.
+- Sidecar shortcuts now use MacTools-wide conflict validation, imported settings are normalized, and unavailable states stay distinct from connectable displays. Panel feedback clears on close or before it becomes stale.
+
+### Fixed
+
+- Eject Disks now detects all visible ejectable mounts when the panel opens, including disk images, fixed external drives, and network volumes.
+- Homebrew, Mouse Enhancer, Activity Bar, System Status, and Window Switcher controls now use the selected app language.
+- Quit Apps now groups multiple running instances of the same app into one entry, preventing blank or misplaced cells while still quitting every instance selected.
+- Finder Right Click now offers path-copy actions on window backgrounds and copies the current folder instead of requiring a selected item.
+
+## [v1.1.1] - 2026-07-16
+
+### Added
+
+- MacTools preferences can be exported and imported as a versioned JSON backup, including app preferences, plugin display settings, and shortcuts. During import, missing plugins can be installed from the verified catalog.
+- The website now provides a bilingual privacy policy explaining MacTools' local-first data handling, system permissions, and network-dependent features.
+
+### Changed
+
+- The feature and component panel switcher is now centered in a capsule-shaped toolbar control, with matching hover shapes for toolbar actions.
+- Plugin Marketplace name sorting now follows the language selected in MacTools, with localized ascending and descending labels.
+- MacTools can now assign a global shortcut to open its Settings window, and the menu-bar panel no longer shows a misleading dashboard focus outline while viewing features.
+- Portable plugin settings can now opt in to preference backup and restore, including Sidecar display priority and shortcut configuration.
+
+### Fixed
+
+- Secondary menu-bar lists now open on the available side of the panel and switch to an in-panel view when screen space is limited.
+- Feature-panel action buttons now match switch widths, preserve label spacing, and expose full long labels in tooltips.
+- Plugin update progress now advances after each plugin finishes during automatic and manual bulk updates.
+- Language names in Settings now remain readable instead of being truncated.
+- Right-clicking the menu bar icon now opens the intended panel reliably on macOS 27 without briefly showing the primary panel or closing immediately.
+- Shortcut recording now accepts F1-F12 as standalone shortcuts, including the shortcut for opening Settings, and explains when other keys require a modifier.
+- The website download now points to the latest stable MacTools DMG instead of a plugin batch release. The Homebrew install command adapts to light and dark appearance and keeps its copy action compact on phones.
+
+## [v1.1.0] - 2026-07-12
+
+### Added
+
+- The plugin marketplace can sort by install status (not installed first, or installed first with updates prioritized) or by name (A–Z / Z–A).
+
+### Changed
+
+- Placed plugin-specific settings between permission and shortcut sections for a more natural configuration flow.
+- The in-app update dialog now includes plugin changes released since the previous app version.
+- Changing the app language now refreshes all Settings and plugin controls immediately without requiring a restart.
+- The language picker now shows each option in the system language alongside its native name.
+- New app versions use a PluginKit-versioned plugin catalog and update installed plugins before loading them, while older app versions continue using the legacy catalog.
+
+### Fixed
+
+- Custom and gallery menu bar icons now use one standard height and content inset with consistent settings previews.
+
+## [plugins-1.1.0] - 2026-07-12
+
+### Added
+
+- Device Battery can show trusted iPhone, iPad, iPod touch, Vision Pro, and paired Apple Watch battery and charging status over USB or Wi-Fi.
+- Keep Awake can optionally keep the display on for every session through its plugin settings and shows an indicator while that mode is active.
+
+### Changed
+
+- Refined the native window switcher overlay and added editable, stable single-key app shortcuts.
+- Device Battery now refreshes Apple mobile devices less often while the component panel is hidden.
+- All plugin packages are rebuilt for PluginKit 3 and published together in a versioned catalog so they remain compatible with the new app runtime.
+
+### Fixed
+
+- Eject Disks no longer treats internal system or non-ejectable volumes as removable disks.
+- Translator source text no longer overlaps the copy and speech actions when the text spans multiple lines.
+
+## [v1.0.31] - 2026-07-09
+
+### Changed
+
+- Improved the menu bar icon settings previews so uploaded and online icons are easier to inspect.
+
+## [plugins-1.0.32] - 2026-07-09
+
+### Added
+
+- System Status now includes settings for arranging component-panel metrics and optional compact menu bar metrics.
+- Added Window Switcher for shortcut-driven window switching with direct cycling, key-based selection, configurable ordering, stable key hints, and hover quit buttons.
+
+### Fixed
+
+- Activity Bar now includes Cursor coding activity in AI work summaries and coding tool trends.
+- Activity Bar now listens for installed AI hooks independently of Input Monitoring tracking.
+- Activity Bar can now uninstall the AI activity hooks it adds for Claude Code, Cursor, and Codex.
+- Battery Charge Limit now prefers the system charge ceiling path when available, uses the correct macOS 26 charging key, and verifies SMC writes to reduce USB-C display disconnects when charging stops at the limit.
+- System Status now reports total GPU usage from the accelerator's total activity metric instead of pipeline-specific counters, avoiding false 100% history samples.
+- Translator service order and enabled-state changes now persist immediately.
+
+## [v1.0.30] - 2026-07-07
+
+### Fixed
+
+- Reduce unnecessary menu bar refresh work when plugins report state changes, keeping panels steadier during frequent updates.
+
+## [plugins-1.0.31] - 2026-07-07
+
+### Added
+
+- Add a Homebrew management plugin for browsing packages, installing and upgrading formulae, and running diagnostics from the menu bar and settings.
+
+### Fixed
+
+- Hide Menu Bar Icons no longer quits after Accessibility is granted before Screen Recording is approved.
+- Hide Menu Bar Icons now keeps the divider where you drag it instead of snapping it back next to the MacTools icon.
+- Keep Awake now restores permanent sessions after restarting MacTools.
+
+## [v1.0.29] - 2026-07-05
+
+### Fixed
+
+- Kept panel position stable and feature panel height accurate as controls expand.
+
+## [plugins-1.0.30] - 2026-07-05
+
+### Changed
+
+- Stop Battery Charge Limit background monitoring while the charging limit is disabled.
+- Pause Menu Bar Hidden background observers when the feature is hidden or not actively in use.
+- Reduce System Status background sampling to lower idle energy use while keeping foreground updates responsive.
+
+### Fixed
+
+- Prevent repeated low-battery notifications when device battery readings switch sources or briefly disappear.
+- Refresh Empty Trash availability when opening the feature panel.
+- Fixed Mouse Enhancer settings switches rendering incorrectly on first open.
+- Avoid administrator password prompts on quit when Fan Control or Battery Charge Limit did not apply SMC changes.
+
+## [v1.0.28] - 2026-07-03
+
+### Fixed
+
+- Finder right-click menu items now stay hidden while the Right Click plugin is disabled.
+
+### Maintenance
+
+- App release notes now come from concise changelog fragments that are compiled into CHANGELOG.md during release.
+
+## [plugins-1.0.29] - 2026-07-03
+
+### Added
+
+- Added Mouse Enhancer, a mouse and trackpad controls plugin with separate horizontal and vertical scroll reversing plus trackpad-tap middle-click simulation.
+
+### Fixed
+
+- Right Click now keeps Finder extension menu visibility aligned with the plugin's enabled state.
+
+### Maintenance
+
+- Plugin batch release notes now come from plugin changelog fragments compiled into CHANGELOG.md during release.
