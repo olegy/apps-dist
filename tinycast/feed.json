@@ -1,0 +1,12 @@
+{
+  "version": "1.2.0",
+  "publishedAt": "2026-11-17T23:11:40Z",
+  "notes": "### Changes\n\n- **An app's shortcut now cycles its windows instead of hiding it.** Pressed while the app is already in front, it brings forward the app's next window, going through all of them in turn; with a single window it does nothing. Minimized windows are skipped, and cycling needs the Accessibility permission.\n- **Updates now come from [olegy/apps-dist](https://github.com/olegy/apps-dist), a public repository of builds.** Copies of 1.1.0 and older still look in the old place and never see this release: install it once by hand from a `tinycast-<version>` release there, and updates work as before from then on.\n- **App shortcuts restore as a row of their own, Applications, with Merge.** Merge keeps this Mac's app shortcuts and adds the backup's; Restore replaces them. In both, a shortcut for an app this Mac does not have is left out, so it no longer takes the chord from an app here that uses the same one.",
+  "assets": [
+    {
+      "name": "Tinycast-1.2.0.zip",
+      "url": "https://github.com/olegy/apps-dist/releases/download/tinycast-1.2.0/Tinycast-1.2.0.zip",
+      "size": 8738404
+    }
+  ]
+}
