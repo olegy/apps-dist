@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>Keyboop Lite</title>
+    <item>
+      <title>1.0.0</title>
+      <pubDate>Wed, 18 Nov 2026 16:37:42 +0000</pubDate>
+      <sparkle:version>1.0.0</sparkle:version>
+      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+<h3>Изменения</h3>
+<ul>
+<li><b>Keyboop Lite — своё приложение.</b> Теперь это <code>Keyboop.app</code> с собственными настройками и разрешениями; настройки Keyboop Mod переносятся один раз вручную. Обновления приходят из <a href="https://github.com/olegy/apps-dist">olegy/apps-dist</a>, а не с keyboop.com.</li>
+<li><b>Английская пунктуация в русской раскладке.</b> В Настройках → «Альтернативная раскладка»: знаки <code>` [ ] ; ' , .</code> печатаются как в английской раскладке, а слово со знаком вместо буквы исправляется — «л.,овь» → «любовь», «,ольшое» → «большое» — на лету, на пробеле, хоткеем, по выделению и перед Enter. Хоткей сразу после исправления возвращает знаки.</li>
+<li><b>Сниппеты раскрываются сразу</b>, как только набран последний символ сокращения («-&gt;» → «→»), без пробела или Enter. Совпадение точное, с учётом регистра и раскладки, работает и внутри слова; пробел в начале или в конце — часть сокращения. Хоткей сразу после раскрытия возвращает сокращение.</li>
+<li><b>Ввод в Raycast, Tinycast, Alfred и других накладных панелях</b> больше не уходит в окно под панелью.</li>
+<li><b>Клавиши F13–F20 подписаны</b> в окне записи хоткея и в настройках, а сочетания вроде ⌃F14, которые раньше записывались как «Правый ⌃», записываются как есть.</li>
+<li><b>Хоткей на пустом поле больше не «бипает»</b>: если ничего не выделено, Keyboop не посылает ⌘C.</li>
+<li><b>Удержание хоткея</b> больше не печатает повторы клавиши в приложение, даже если модификаторы отпущены раньше.</li>
+<li><b>Правый клик по значку</b> по умолчанию открывает настройки (можно переключить на паузу «Не мешать»).</li>
+</ul>
+<h3>Удалено</h3>
+<ul>
+<li><b>Голосовой ввод</b>: диктовка по хоткею, модели распознавания Whisper и Parakeet и их загрузка, словарь и правила вывода, индикатор записи и остров у выреза, приглушение звука, история диктовок и аудиоклипы, история буфера обмена, вставка последней диктовки. Доступ к микрофону больше не нужен.</li>
+<li><b>Запись звонков</b> по ⌥-клику по значку и расшифровка аудиофайлов.</li>
+<li><b>Отправка отзывов автору</b> из программы. В сеть Keyboop теперь выходит только за обновлениями.</li>
+<li><b>Клавиша 🌐 как хоткей</b> и второй процесс Keyboop, который её охранял.</li>
+</ul>
+      ]]></description>
+      <enclosure url="https://github.com/olegy/apps-dist/releases/download/keyboop-1.0.0/Keyboop-1.0.0.zip" type="application/octet-stream" sparkle:edSignature="1xNpptKy1Q+Z/HPCe6fhKV16m3gq4JbzpLPTm8czg2Qrn6B/SNt6XZ9YsZ9Xua6W2JyyE/5i8mR4CwEhlVqFBA==" length="3581085"></enclosure>
+    </item>
+  </channel>
+</rss><!-- sparkle-signatures:
+edSignature: dzaZBn+xyjh/EQe29ZYiWAzQ1WZXUjjSSeZqB7ofKHn0lb8iAHBCM1C0RzW9e0v99QclfXJ1hSrJPDPu/a/kAQ==
+length: 4743
+-->
