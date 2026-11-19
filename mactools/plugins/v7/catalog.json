@@ -1,6 +1,6 @@
 {
   "catalogID" : "com.ggbond.mactools.plugins",
-  "generatedAt" : "2026-11-18T11:50:35Z",
+  "generatedAt" : "2026-11-19T23:31:06Z",
   "minimumHostVersion" : "1.2.1",
   "pluginKitVersion" : 7,
   "plugins" : [
@@ -20826,9 +20826,9 @@
       },
       "minimumHostVersion" : "2.0.1",
       "package" : {
-        "sha256" : "faf1bb3e1ffc6445ddbc1507b12ca7bfa550ad56d9db8fac1215efb325882035",
-        "size" : 684442,
-        "url" : "https://github.com/olegy/apps-dist/releases/download/mactools-build-15/notes.mactoolsplugin.zip"
+        "sha256" : "c7c2a74559418863c8f9f3b2f5aaf964120817df34552e5b08e95dcca0d78bf9",
+        "size" : 676948,
+        "url" : "https://github.com/olegy/apps-dist/releases/download/mactools-build-16/notes.mactoolsplugin.zip"
       },
       "permissions" : [
 
@@ -20918,7 +20918,7 @@
         ]
       },
       "releaseChannel" : null,
-      "releaseNotesURL" : "https://github.com/olegy/apps-dist/releases/tag/mactools-build-15",
+      "releaseNotesURL" : "https://github.com/olegy/apps-dist/releases/tag/mactools-build-16",
       "requirements" : {
         "applications" : [
 
@@ -20949,7 +20949,7 @@
         ]
       },
       "summary" : "在小巧的窗口中书写纯 Markdown 笔记。",
-      "version" : "1.15.1"
+      "version" : "1.16.1"
     },
     {
       "actions" : {
@@ -28170,299 +28170,6 @@
       "version" : "0.14.1"
     },
     {
-      "capabilities" : {
-        "panelItems" : [
-          "row",
-          "widget"
-        ],
-        "settings" : "form"
-      },
-      "category" : "productivity",
-      "discovery" : {
-        "alternativePluginIDs" : [
-
-        ],
-        "goalCategories" : [
-          "productivity"
-        ],
-        "keywords" : [
-          "window",
-          "border",
-          "focus",
-          "highlight",
-          "active",
-          "outline",
-          "productivity"
-        ],
-        "localizedSynonyms" : {
-          "ar" : [
-            "حدود النوافذ"
-          ],
-          "de" : [
-            "Fensterrahmen"
-          ],
-          "en" : [
-            "Window Borders"
-          ],
-          "es" : [
-            "Bordes de ventana"
-          ],
-          "fr" : [
-            "Bordures de fenêtre"
-          ],
-          "ja" : [
-            "ウインドウの枠線"
-          ],
-          "ko" : [
-            "윈도우 테두리"
-          ],
-          "pt" : [
-            "Bordas de janela"
-          ],
-          "ru" : [
-            "Рамки окон"
-          ],
-          "tr" : [
-            "Pencere Kenarlıkları"
-          ],
-          "zh-Hans" : [
-            "窗口边框"
-          ],
-          "zh-Hant" : [
-            "視窗邊框"
-          ]
-        },
-        "relatedPluginIDs" : [
-
-        ],
-        "useCases" : [
-          {
-            "id" : "primary-use",
-            "title" : {
-              "ar" : "حدود النوافذ",
-              "de" : "Fensterrahmen",
-              "en" : "Window Borders",
-              "es" : "Bordes de ventana",
-              "fr" : "Bordures de fenêtre",
-              "ja" : "ウインドウの枠線",
-              "ko" : "윈도우 테두리",
-              "pt" : "Bordas de janela",
-              "ru" : "Рамки окон",
-              "tr" : "Pencere Kenarlıkları",
-              "zh-Hans" : "窗口边框",
-              "zh-Hant" : "視窗邊框"
-            }
-          }
-        ]
-      },
-      "displayName" : "窗口边框",
-      "id" : "window-borders",
-      "localizedMetadata" : {
-        "ar" : {
-          "displayName" : "حدود النوافذ",
-          "summary" : "ترسم إطارًا ملونًا حول النافذة النشطة."
-        },
-        "de" : {
-          "displayName" : "Fensterrahmen",
-          "summary" : "Zeichnet einen farbigen Rahmen um das aktive Fenster."
-        },
-        "en" : {
-          "displayName" : "Window Borders",
-          "summary" : "Draws a colored border around the active window."
-        },
-        "es" : {
-          "displayName" : "Bordes de ventana",
-          "summary" : "Dibuja un borde de color alrededor de la ventana activa."
-        },
-        "fr" : {
-          "displayName" : "Bordures de fenêtre",
-          "summary" : "Dessine une bordure colorée autour de la fenêtre active."
-        },
-        "ja" : {
-          "displayName" : "ウインドウの枠線",
-          "summary" : "アクティブなウインドウの周りに色付きの枠線を表示します。"
-        },
-        "ko" : {
-          "displayName" : "윈도우 테두리",
-          "summary" : "활성 윈도우 주변에 색상 테두리를 그립니다."
-        },
-        "pt" : {
-          "displayName" : "Bordas de janela",
-          "summary" : "Desenha uma borda colorida ao redor da janela ativa."
-        },
-        "ru" : {
-          "displayName" : "Рамки окон",
-          "summary" : "Рисует цветную рамку вокруг активного окна."
-        },
-        "tr" : {
-          "displayName" : "Pencere Kenarlıkları",
-          "summary" : "Etkin pencerenin çevresine renkli bir kenarlık çizer."
-        },
-        "zh-Hans" : {
-          "displayName" : "窗口边框",
-          "summary" : "在当前活跃窗口周围绘制彩色边框。"
-        },
-        "zh-Hant" : {
-          "displayName" : "視窗邊框",
-          "summary" : "在目前使用中的視窗周圍繪製彩色邊框。"
-        }
-      },
-      "minimumHostVersion" : "1.3.1",
-      "package" : {
-        "sha256" : "019b71cfece6f046c812fbf61fe132ed0f1095139fe0427041b04a624eb6b1ad",
-        "size" : 165885,
-        "url" : "https://github.com/olegy/apps-dist/releases/download/mactools-build-14/window-borders.mactoolsplugin.zip"
-      },
-      "permissions" : [
-        "accessibility"
-      ],
-      "pluginKitVersion" : 7,
-      "preferencesBackup" : {
-        "exclusions" : [
-
-        ],
-        "status" : "localOnly"
-      },
-      "presentation" : {
-        "documentationURL" : "https://github.com/ggbond268/MacTools#plugins-and-settings",
-        "examples" : [
-          {
-            "id" : "primary-use",
-            "text" : {
-              "ar" : "ترسم إطارًا ملونًا حول النافذة النشطة.",
-              "de" : "Zeichnet einen farbigen Rahmen um das aktive Fenster.",
-              "en" : "Draws a colored border around the active window.",
-              "es" : "Dibuja un borde de color alrededor de la ventana activa.",
-              "fr" : "Dessine une bordure colorée autour de la fenêtre active.",
-              "ja" : "アクティブなウインドウの周りに色付きの枠線を表示します。",
-              "ko" : "활성 윈도우 주변에 색상 테두리를 그립니다.",
-              "pt" : "Desenha uma borda colorida ao redor da janela ativa.",
-              "ru" : "Рисует цветную рамку вокруг активного окна.",
-              "tr" : "Etkin pencerenin çevresine renkli bir kenarlık çizer.",
-              "zh-Hans" : "在当前活跃窗口周围绘制彩色边框。",
-              "zh-Hant" : "在目前使用中的視窗周圍繪製彩色邊框。"
-            }
-          }
-        ],
-        "license" : "GPL-3.0-only",
-        "longDescription" : {
-          "ar" : "ترسم إطارًا ملونًا حول النافذة النشطة.",
-          "de" : "Zeichnet einen farbigen Rahmen um das aktive Fenster.",
-          "en" : "Draws a colored border around the active window.",
-          "es" : "Dibuja un borde de color alrededor de la ventana activa.",
-          "fr" : "Dessine une bordure colorée autour de la fenêtre active.",
-          "ja" : "アクティブなウインドウの周りに色付きの枠線を表示します。",
-          "ko" : "활성 윈도우 주변에 색상 테두리를 그립니다.",
-          "pt" : "Desenha uma borda colorida ao redor da janela ativa.",
-          "ru" : "Рисует цветную рамку вокруг активного окна.",
-          "tr" : "Etkin pencerenin çevresine renkli bir kenarlık çizer.",
-          "zh-Hans" : "在当前活跃窗口周围绘制彩色边框。",
-          "zh-Hant" : "在目前使用中的視窗周圍繪製彩色邊框。"
-        },
-        "publisher" : "MacTools",
-        "screenshots" : [
-
-        ],
-        "supportURL" : "https://github.com/ggbond268/MacTools/issues"
-      },
-      "privacy" : {
-        "allowsUserConfiguredDomains" : false,
-        "dataObserved" : [
-          "window-frames"
-        ],
-        "dataPersisted" : [
-          "plugin-configuration"
-        ],
-        "diagnosticExportsContainUserData" : false,
-        "networkDomains" : [
-
-        ],
-        "networkUse" : "none",
-        "processesSensitiveUserContent" : false,
-        "retention" : {
-          "policy" : "user-controlled"
-        },
-        "telemetry" : "none"
-      },
-      "relationships" : {
-        "includedPackIDs" : [
-
-        ],
-        "relatedPluginIDs" : [
-
-        ],
-        "suggestedRecipeIDs" : [
-
-        ],
-        "supersedesPluginIDs" : [
-
-        ]
-      },
-      "releaseChannel" : null,
-      "releaseNotesURL" : "https://github.com/olegy/apps-dist/releases/tag/mactools-build-14",
-      "requirements" : {
-        "applications" : [
-
-        ],
-        "architectures" : [
-          "arm64",
-          "x86_64"
-        ],
-        "executables" : [
-
-        ],
-        "hardware" : [
-
-        ],
-        "minimumMacOSVersion" : "14.0",
-        "permissionIDs" : [
-          "accessibility"
-        ],
-        "requiresRelaunch" : false,
-        "setupComplexity" : "guided"
-      },
-      "setup" : {
-        "optionalSurfaces" : [
-
-        ],
-        "steps" : [
-          {
-            "description" : {
-              "ar" : "قبل استخدام هذه الإضافة، راجع المتطلبات التالية واستوفها: إذن تسهيلات الاستخدام.",
-              "de" : "Prüfe und erfülle vor der Verwendung dieses Plugins folgende Anforderungen: Bedienungshilfen-Berechtigung.",
-              "en" : "Before using this plugin, review and satisfy these requirements: Accessibility permission.",
-              "es" : "Antes de usar este plugin, revisa y cumple estos requisitos: permiso de Accesibilidad.",
-              "fr" : "Avant d’utiliser ce module, vérifiez et remplissez les conditions suivantes : autorisation Accessibilité.",
-              "ja" : "このプラグインを使用する前に、次の要件を確認して満たしてください：アクセシビリティ権限。",
-              "ko" : "이 플러그인을 사용하기 전에 다음 요구 사항을 확인하고 충족하세요: 손쉬운 사용 권한.",
-              "pt" : "Antes de usar este plugin, revise e cumpra estes requisitos: permissão de Acessibilidade.",
-              "ru" : "Перед использованием плагина проверьте и выполните следующие требования: доступ к Универсальному доступу.",
-              "tr" : "Bu eklentiyi kullanmadan önce şu gereksinimleri gözden geçirin ve karşılayın: Erişilebilirlik izni.",
-              "zh-Hans" : "使用此插件前，请检查并满足以下要求：辅助功能权限。",
-              "zh-Hant" : "使用此外掛程式前，請檢查並滿足以下要求：輔助使用權限。"
-            },
-            "id" : "review-requirements",
-            "title" : {
-              "ar" : "إعداد حدود النوافذ",
-              "de" : "Fensterrahmen einrichten",
-              "en" : "Set Up Window Borders",
-              "es" : "Configurar Bordes de ventana",
-              "fr" : "Configurer Bordures de fenêtre",
-              "ja" : "ウインドウの枠線を設定",
-              "ko" : "윈도우 테두리 설정",
-              "pt" : "Configurar Bordas de janela",
-              "ru" : "Настройка «Рамки окон»",
-              "tr" : "Pencere Kenarlıkları Kurulumu",
-              "zh-Hans" : "设置窗口边框",
-              "zh-Hant" : "設定視窗邊框"
-            }
-          }
-        ]
-      },
-      "summary" : "在当前活跃窗口周围绘制彩色边框。",
-      "version" : "1.14.1"
-    },
-    {
       "actions" : {
         "providers" : [
           {
@@ -31306,6 +31013,315 @@
       "version" : "2.14.1"
     },
     {
+      "capabilities" : {
+        "panelItems" : [
+          "row",
+          "widget"
+        ],
+        "settings" : "form"
+      },
+      "category" : "productivity",
+      "discovery" : {
+        "alternativePluginIDs" : [
+
+        ],
+        "goalCategories" : [
+          "productivity"
+        ],
+        "keywords" : [
+          "window",
+          "manager",
+          "move",
+          "resize",
+          "maximize",
+          "layout",
+          "snap",
+          "border",
+          "focus",
+          "highlight",
+          "productivity"
+        ],
+        "localizedSynonyms" : {
+          "ar" : [
+            "إدارة النوافذ",
+            "حدود النوافذ"
+          ],
+          "de" : [
+            "Fensterverwaltung",
+            "Fensterrahmen"
+          ],
+          "en" : [
+            "Window Manager",
+            "Window Borders"
+          ],
+          "es" : [
+            "Gestor de ventanas",
+            "Bordes de ventana"
+          ],
+          "fr" : [
+            "Gestionnaire de fenêtres",
+            "Bordures de fenêtre"
+          ],
+          "ja" : [
+            "ウインドウ管理",
+            "ウインドウの枠線"
+          ],
+          "ko" : [
+            "윈도우 관리자",
+            "윈도우 테두리"
+          ],
+          "pt" : [
+            "Gestor de janelas",
+            "Bordas de janela"
+          ],
+          "ru" : [
+            "Управление окнами",
+            "Рамки окон"
+          ],
+          "tr" : [
+            "Pencere Yöneticisi",
+            "Pencere Kenarlıkları"
+          ],
+          "zh-Hans" : [
+            "窗口管理",
+            "窗口边框"
+          ],
+          "zh-Hant" : [
+            "視窗管理",
+            "視窗邊框"
+          ]
+        },
+        "relatedPluginIDs" : [
+
+        ],
+        "useCases" : [
+          {
+            "id" : "primary-use",
+            "title" : {
+              "ar" : "إدارة النوافذ",
+              "de" : "Fensterverwaltung",
+              "en" : "Window Manager",
+              "es" : "Gestor de ventanas",
+              "fr" : "Gestionnaire de fenêtres",
+              "ja" : "ウインドウ管理",
+              "ko" : "윈도우 관리자",
+              "pt" : "Gestor de janelas",
+              "ru" : "Управление окнами",
+              "tr" : "Pencere Yöneticisi",
+              "zh-Hans" : "窗口管理",
+              "zh-Hant" : "視窗管理"
+            }
+          }
+        ]
+      },
+      "displayName" : "窗口管理",
+      "id" : "window-manager",
+      "localizedMetadata" : {
+        "ar" : {
+          "displayName" : "إدارة النوافذ",
+          "summary" : "انقل النوافذ وغيّر حجمها واحفظ تخطيطها باختصارات، وارسم إطارًا حول النافذة النشطة."
+        },
+        "de" : {
+          "displayName" : "Fensterverwaltung",
+          "summary" : "Fenster per Tastenkürzel verschieben, skalieren und Layouts sichern; dazu ein Rahmen um das aktive Fenster."
+        },
+        "en" : {
+          "displayName" : "Window Manager",
+          "summary" : "Move, resize, and save window layouts with shortcuts, and outline the active window."
+        },
+        "es" : {
+          "displayName" : "Gestor de ventanas",
+          "summary" : "Mueve, redimensiona y guarda la disposición de ventanas con atajos, y resalta la ventana activa."
+        },
+        "fr" : {
+          "displayName" : "Gestionnaire de fenêtres",
+          "summary" : "Déplacez, redimensionnez et enregistrez la disposition des fenêtres au clavier, et encadrez la fenêtre active."
+        },
+        "ja" : {
+          "displayName" : "ウインドウ管理",
+          "summary" : "ショートカットでウインドウの移動・サイズ変更・レイアウト保存を行い、アクティブなウインドウに枠線を表示します。"
+        },
+        "ko" : {
+          "displayName" : "윈도우 관리자",
+          "summary" : "단축키로 윈도우를 이동하고 크기를 조절하며 레이아웃을 저장하고, 활성 윈도우에 테두리를 그립니다."
+        },
+        "pt" : {
+          "displayName" : "Gestor de janelas",
+          "summary" : "Mova, redimensione e guarde a disposição das janelas com atalhos, e destaque a janela ativa."
+        },
+        "ru" : {
+          "displayName" : "Управление окнами",
+          "summary" : "Перемещение, размер и сохранение раскладки окон горячими клавишами, рамка вокруг активного окна."
+        },
+        "tr" : {
+          "displayName" : "Pencere Yöneticisi",
+          "summary" : "Kısayollarla pencereleri taşıyın, boyutlandırın ve yerleşimi kaydedin; etkin pencereye kenarlık çizin."
+        },
+        "zh-Hans" : {
+          "displayName" : "窗口管理",
+          "summary" : "用快捷键移动、调整和保存窗口布局，并为活跃窗口绘制边框。"
+        },
+        "zh-Hant" : {
+          "displayName" : "視窗管理",
+          "summary" : "用快速鍵移動、調整和儲存視窗佈局，並為使用中的視窗繪製邊框。"
+        }
+      },
+      "minimumHostVersion" : "1.3.1",
+      "package" : {
+        "sha256" : "92ae246aba2d528d74515b9012df2dd4f3a9447874e192706bcdcf0237b66f97",
+        "size" : 303964,
+        "url" : "https://github.com/olegy/apps-dist/releases/download/mactools-build-16/window-manager.mactoolsplugin.zip"
+      },
+      "permissions" : [
+        "accessibility"
+      ],
+      "pluginKitVersion" : 7,
+      "preferencesBackup" : {
+        "exclusions" : [
+
+        ],
+        "status" : "localOnly"
+      },
+      "presentation" : {
+        "documentationURL" : "https://github.com/ggbond268/MacTools#plugins-and-settings",
+        "examples" : [
+          {
+            "id" : "primary-use",
+            "text" : {
+              "ar" : "انقل النوافذ وغيّر حجمها واحفظ تخطيطها باختصارات، وارسم إطارًا حول النافذة النشطة.",
+              "de" : "Fenster per Tastenkürzel verschieben, skalieren und Layouts sichern; dazu ein Rahmen um das aktive Fenster.",
+              "en" : "Move, resize, and save window layouts with shortcuts, and outline the active window.",
+              "es" : "Mueve, redimensiona y guarda la disposición de ventanas con atajos, y resalta la ventana activa.",
+              "fr" : "Déplacez, redimensionnez et enregistrez la disposition des fenêtres au clavier, et encadrez la fenêtre active.",
+              "ja" : "ショートカットでウインドウの移動・サイズ変更・レイアウト保存を行い、アクティブなウインドウに枠線を表示します。",
+              "ko" : "단축키로 윈도우를 이동하고 크기를 조절하며 레이아웃을 저장하고, 활성 윈도우에 테두리를 그립니다.",
+              "pt" : "Mova, redimensione e guarde a disposição das janelas com atalhos, e destaque a janela ativa.",
+              "ru" : "Перемещение, размер и сохранение раскладки окон горячими клавишами, рамка вокруг активного окна.",
+              "tr" : "Kısayollarla pencereleri taşıyın, boyutlandırın ve yerleşimi kaydedin; etkin pencereye kenarlık çizin.",
+              "zh-Hans" : "用快捷键移动、调整和保存窗口布局，并为活跃窗口绘制边框。",
+              "zh-Hant" : "用快速鍵移動、調整和儲存視窗佈局，並為使用中的視窗繪製邊框。"
+            }
+          }
+        ],
+        "license" : "GPL-3.0-only",
+        "longDescription" : {
+          "ar" : "انقل النوافذ وغيّر حجمها واحفظ تخطيطها باختصارات، وارسم إطارًا حول النافذة النشطة.",
+          "de" : "Fenster per Tastenkürzel verschieben, skalieren und Layouts sichern; dazu ein Rahmen um das aktive Fenster.",
+          "en" : "Move, resize, and save window layouts with shortcuts, and outline the active window.",
+          "es" : "Mueve, redimensiona y guarda la disposición de ventanas con atajos, y resalta la ventana activa.",
+          "fr" : "Déplacez, redimensionnez et enregistrez la disposition des fenêtres au clavier, et encadrez la fenêtre active.",
+          "ja" : "ショートカットでウインドウの移動・サイズ変更・レイアウト保存を行い、アクティブなウインドウに枠線を表示します。",
+          "ko" : "단축키로 윈도우를 이동하고 크기를 조절하며 레이아웃을 저장하고, 활성 윈도우에 테두리를 그립니다.",
+          "pt" : "Mova, redimensione e guarde a disposição das janelas com atalhos, e destaque a janela ativa.",
+          "ru" : "Перемещение, размер и сохранение раскладки окон горячими клавишами, рамка вокруг активного окна.",
+          "tr" : "Kısayollarla pencereleri taşıyın, boyutlandırın ve yerleşimi kaydedin; etkin pencereye kenarlık çizin.",
+          "zh-Hans" : "用快捷键移动、调整和保存窗口布局，并为活跃窗口绘制边框。",
+          "zh-Hant" : "用快速鍵移動、調整和儲存視窗佈局，並為使用中的視窗繪製邊框。"
+        },
+        "publisher" : "MacTools",
+        "screenshots" : [
+
+        ],
+        "supportURL" : "https://github.com/ggbond268/MacTools/issues"
+      },
+      "privacy" : {
+        "allowsUserConfiguredDomains" : false,
+        "dataObserved" : [
+          "window-frames"
+        ],
+        "dataPersisted" : [
+          "plugin-configuration"
+        ],
+        "diagnosticExportsContainUserData" : false,
+        "networkDomains" : [
+
+        ],
+        "networkUse" : "none",
+        "processesSensitiveUserContent" : false,
+        "retention" : {
+          "policy" : "user-controlled"
+        },
+        "telemetry" : "none"
+      },
+      "relationships" : {
+        "includedPackIDs" : [
+
+        ],
+        "relatedPluginIDs" : [
+
+        ],
+        "suggestedRecipeIDs" : [
+
+        ],
+        "supersedesPluginIDs" : [
+
+        ]
+      },
+      "releaseChannel" : null,
+      "releaseNotesURL" : "https://github.com/olegy/apps-dist/releases/tag/mactools-build-16",
+      "requirements" : {
+        "applications" : [
+
+        ],
+        "architectures" : [
+          "arm64",
+          "x86_64"
+        ],
+        "executables" : [
+
+        ],
+        "hardware" : [
+
+        ],
+        "minimumMacOSVersion" : "14.0",
+        "permissionIDs" : [
+          "accessibility"
+        ],
+        "requiresRelaunch" : false,
+        "setupComplexity" : "guided"
+      },
+      "setup" : {
+        "optionalSurfaces" : [
+
+        ],
+        "steps" : [
+          {
+            "description" : {
+              "ar" : "قبل استخدام هذه الإضافة، راجع المتطلبات التالية واستوفها: إذن تسهيلات الاستخدام.",
+              "de" : "Prüfe und erfülle vor der Verwendung dieses Plugins folgende Anforderungen: Bedienungshilfen-Berechtigung.",
+              "en" : "Before using this plugin, review and satisfy these requirements: Accessibility permission.",
+              "es" : "Antes de usar este plugin, revisa y cumple estos requisitos: permiso de Accesibilidad.",
+              "fr" : "Avant d’utiliser ce module, vérifiez et remplissez les conditions suivantes : autorisation Accessibilité.",
+              "ja" : "このプラグインを使用する前に、次の要件を確認して満たしてください：アクセシビリティ権限。",
+              "ko" : "이 플러그인을 사용하기 전에 다음 요구 사항을 확인하고 충족하세요: 손쉬운 사용 권한.",
+              "pt" : "Antes de usar este plugin, revise e cumpra estes requisitos: permissão de Acessibilidade.",
+              "ru" : "Перед использованием плагина проверьте и выполните следующие требования: доступ к Универсальному доступу.",
+              "tr" : "Bu eklentiyi kullanmadan önce şu gereksinimleri gözden geçirin ve karşılayın: Erişilebilirlik izni.",
+              "zh-Hans" : "使用此插件前，请检查并满足以下要求：辅助功能权限。",
+              "zh-Hant" : "使用此外掛程式前，請檢查並滿足以下要求：輔助使用權限。"
+            },
+            "id" : "review-requirements",
+            "title" : {
+              "ar" : "إعداد إدارة النوافذ",
+              "de" : "Fensterverwaltung einrichten",
+              "en" : "Set Up Window Manager",
+              "es" : "Configurar Gestor de ventanas",
+              "fr" : "Configurer Gestionnaire de fenêtres",
+              "ja" : "ウインドウ管理を設定",
+              "ko" : "윈도우 관리자 설정",
+              "pt" : "Configurar Gestor de janelas",
+              "ru" : "Настройка «Управление окнами»",
+              "tr" : "Pencere Yöneticisi Kurulumu",
+              "zh-Hans" : "设置窗口管理",
+              "zh-Hant" : "設定視窗管理"
+            }
+          }
+        ]
+      },
+      "summary" : "用快捷键移动、调整和保存窗口布局，并为活跃窗口绘制边框。",
+      "version" : "1.16.1"
+    },
+    {
       "actions" : {
         "providers" : [
           {
@@ -32484,6 +32500,6 @@
   "schemaVersion" : 3,
   "signature" : {
     "algorithm" : "ed25519",
-    "value" : "v27V8t0InckKIdl2WTcvwA9N73QzRp20WAP11dHQpRtVSZemiLst370w4sYIwAztqr9n5p9Ei0RJHEIceY8lCw=="
+    "value" : "3MCxXgAXqrm7q4b/T2iKo/oXvkUIspAW0p+nm3SwuoUGsPhA0YAbNCXu6vhSCUwXnVb5AxwlYuUykOxb3lQDDg=="
   }
 }
