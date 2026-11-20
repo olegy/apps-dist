@@ -1,6 +1,6 @@
 {
   "catalogID" : "com.ggbond.mactools.plugins",
-  "generatedAt" : "2026-11-19T23:31:06Z",
+  "generatedAt" : "2026-11-20T10:20:58Z",
   "minimumHostVersion" : "1.2.1",
   "pluginKitVersion" : 7,
   "plugins" : [
@@ -31168,9 +31168,9 @@
       },
       "minimumHostVersion" : "1.3.1",
       "package" : {
-        "sha256" : "92ae246aba2d528d74515b9012df2dd4f3a9447874e192706bcdcf0237b66f97",
-        "size" : 303964,
-        "url" : "https://github.com/olegy/apps-dist/releases/download/mactools-build-16/window-manager.mactoolsplugin.zip"
+        "sha256" : "e03a0bc0822ae4f9b396e025bc2e8ec15370f817e8dcf4c292a5e7baf8d9b7e8",
+        "size" : 310839,
+        "url" : "https://github.com/olegy/apps-dist/releases/download/mactools-build-17/window-manager.mactoolsplugin.zip"
       },
       "permissions" : [
         "accessibility"
@@ -31258,7 +31258,7 @@
         ]
       },
       "releaseChannel" : null,
-      "releaseNotesURL" : "https://github.com/olegy/apps-dist/releases/tag/mactools-build-16",
+      "releaseNotesURL" : "https://github.com/olegy/apps-dist/releases/tag/mactools-build-17",
       "requirements" : {
         "applications" : [
 
@@ -31319,7 +31319,7 @@
         ]
       },
       "summary" : "用快捷键移动、调整和保存窗口布局，并为活跃窗口绘制边框。",
-      "version" : "1.16.1"
+      "version" : "1.17.1"
     },
     {
       "actions" : {
@@ -32500,6 +32500,6 @@
   "schemaVersion" : 3,
   "signature" : {
     "algorithm" : "ed25519",
-    "value" : "3MCxXgAXqrm7q4b/T2iKo/oXvkUIspAW0p+nm3SwuoUGsPhA0YAbNCXu6vhSCUwXnVb5AxwlYuUykOxb3lQDDg=="
+    "value" : "8AYl0s62AglQ7S6x01+GcSfomDHmZjC4tjAS+fr+Vf54Ie3itvj+ldCPINBxNhggrfdvWxdqvYzuJtEYWqLiCQ=="
   }
 }
