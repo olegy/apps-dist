@@ -1,6 +1,6 @@
 {
   "catalogID" : "com.ggbond.mactools.plugins",
-  "generatedAt" : "2026-11-24T22:02:43Z",
+  "generatedAt" : "2026-11-26T09:03:02Z",
   "minimumHostVersion" : "1.2.1",
   "pluginKitVersion" : 7,
   "plugins" : [
@@ -20826,9 +20826,9 @@
       },
       "minimumHostVersion" : "2.0.1",
       "package" : {
-        "sha256" : "10d09efad5e2d6582802ffa42ead9efeb9ba2d252bf905186556a12c79f174c5",
-        "size" : 678241,
-        "url" : "https://github.com/olegy/apps-dist/releases/download/mactools-build-18/notes.mactoolsplugin.zip"
+        "sha256" : "b3dac11461d21029323511d36bc549d87caeb79e299c23b7bb24d11a59775e82",
+        "size" : 679404,
+        "url" : "https://github.com/olegy/apps-dist/releases/download/mactools-build-21/notes.mactoolsplugin.zip"
       },
       "permissions" : [
 
@@ -20918,7 +20918,7 @@
         ]
       },
       "releaseChannel" : null,
-      "releaseNotesURL" : "https://github.com/olegy/apps-dist/releases/tag/mactools-build-18",
+      "releaseNotesURL" : "https://github.com/olegy/apps-dist/releases/tag/mactools-build-21",
       "requirements" : {
         "applications" : [
 
@@ -20949,7 +20949,7 @@
         ]
       },
       "summary" : "在小巧的窗口中书写纯 Markdown 笔记。",
-      "version" : "1.18.1"
+      "version" : "1.21.1"
     },
     {
       "actions" : {
@@ -32500,6 +32500,6 @@
   "schemaVersion" : 3,
   "signature" : {
     "algorithm" : "ed25519",
-    "value" : "e1koW2MIBN4m8zzBjeLjq2b4ecVLnfRfvrxs/hZuTm+f0uf5YtzxqJYbKUph/744tS1V5WtXwJB6jIi+dvpXAQ=="
+    "value" : "fwV+PvFL9bDJGO7kkfqZyCS0fAahzA3NxkoRgW5xs+WiW7iAnmhapaLJ3gUsBKNpUJ4yZnieVZDjsgEgCNlyCQ=="
   }
 }
